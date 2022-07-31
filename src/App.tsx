@@ -1,13 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
-function App() {
+export default function App() {
+  const [cat, setCat] = useState("");
+  const [words, setWords] = useState("");
+
+  const CATAAS_URL = "https://cataas.com/";
   return (
+
     <div className="App">
-      <p>Hello World</p>
+      <input
+        type='text'
+        id='cat-says'
+        name='cat-says'
+        onChange={(e)=>setWords(e.target.value)}/>
+      <br/>
+      <button onClick={getCat}>GIMME CAT</button>
+      <br/>
+      <br/>
+      <img src={cat}/>
     </div>
   );
-}
 
-export default App;
+  function getCat(){
+    setCat(CATAAS_URL+'cat/says/'+words+'?_=' + new Date().getTime());
+    console.log(cat)
+  }
+}
