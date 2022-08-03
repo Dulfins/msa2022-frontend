@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import TextField from "@mui/material/TextField"
-import { Box, Button, Grid, Paper, Skeleton, Select, Switch, FormControlLabel } from "@mui/material";
+import { Box, Button, Grid, Paper, Switch, FormControlLabel } from "@mui/material";
 import './App.css';
-import { ClassNames } from '@emotion/react';
 
 
 export default function App() {
@@ -95,7 +94,7 @@ export default function App() {
               </Grid>
               <Grid item xs={6}>
                 <Box padding={4} display="flex" justifyContent="flex-end">
-                  <img src={cat} />
+                  <img src={cat} alt=""/>
                 </Box>
               </Grid>
             </Grid>
