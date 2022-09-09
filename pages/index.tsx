@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField"
 import { Box, Button, Grid, Paper, Switch, FormControlLabel } from "@mui/material";
 import {useTheme} from "@mui/material/styles"
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Typography from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default function App() {
   const [cat, setCat] = useState("");
